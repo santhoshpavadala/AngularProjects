@@ -1,0 +1,12 @@
+<p>Ex-28 Property Binding </p>
+<button class="btn btn-primary" disabled>Add Server</button>
+
+<button class="btn btn-primary" [disabled]="!allowNewServer">Add Server</button>
+
+
+
+<!-- Property binding vs string interpolation -->
+<p>{{ allowNewServer }}</p>
+<!-- Above is string interpolation -->
+<p [innerText]="allowNewServer"></p>
+<!-- Above is proprty binding -->
