@@ -1,0 +1,42 @@
+<h3>37.Using ngIf to output Data Conditionally & 38.Enhancing ngIf with an Else condition</h3>
+<label for="">Server Name</label>
+<input type="text" class="form-control" [(ngModel)]="ngIfServerName">
+<button class="btn btn-primary" (click)="onCreatengIfEvent()">Add Server</button>
+<!-- <p>{{ ngIfServerStatus }}</p> -->
+<!-- For ngIf condition below -->
+<p *ngIf="serverCreated">Server was created, server name is {{ngIfServerName}}</p>
+
+<!-- For ngIf else conditon -->
+<p *ngIf="serverCreated; else noServer">Server was created, server name is {{ngIfServerName}}</p>
+<ng-template #noServer>
+    <p>No Server was created</p>
+</ng-template>
+
+
+<h3>39.Styling elements Dinamically with ngStyle</h3>
+<p [ngStyle]="{backgroundColor: getColor()}">{{ 'Server' }} with ID {{ serverId }} and status is {{ getServerStatus() }}</p>
+
+
+<h3>40.Apply CSS Classes Dinamically with ngClass</h3>
+<p [ngStyle]="{backgroundColor: getColor()}" [ngClass]="{online: serverStatus === 'online'}" >
+    {{ 'Server' }} with ID {{ serverId }} and status is {{ getServerStatus() }}
+</p>
+
+<h3>41.Outputting Lists with ngFor</h3>
+<!-- <input type="text" class="form-control" [(ngModel)]="ngIfServerName">
+<button class="btn btn-primary" (click)="onCreatengIfEvent()">Add Server</button>
+<p *ngIf="serverCreated">Server was created, server name is {{ngIfServerName}}</p> -->
+<app-server  *ngFor="let server of servers"></app-server>
+
+<hr>
+<!-- Directives Assignments solutions -->
+<h3>42.Directives Assignments solutions</h3>
+<button class="btn btn-primary" (click)="showSecret=!showSecret">Show Password</button>
+<p *ngIf="showSecret">Secret password = sant</p>
+
+<button class="btn btn-primary" (click)="onToggleDetails()">Show Password</button>
+<p *ngIf="showSecret">Secret password = sant</p>
+<div *ngFor="let logItem of log; let i = index"
+[ngStyle]="{backgroundColor: i >= 4 ? 'blue' : 'transparent'}"
+[ngClass]="{'white-text': i >= 4}"> {{ logItem }} </div>
+

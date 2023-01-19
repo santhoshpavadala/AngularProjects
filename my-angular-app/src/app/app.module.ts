@@ -13,6 +13,7 @@ import { SuccessAlertComponent } from './success-alert/success-alert.component';
 import { PropertyBindingComponent } from './property-binding/property-binding.component';
 import { StringInterpolationComponent } from './string-interpolation/string-interpolation.component';
 import { EventBindingComponent } from './event-binding/event-binding.component';
+import { DirectivesComponent } from './directives/directives.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { EventBindingComponent } from './event-binding/event-binding.component';
     SuccessAlertComponent,
     PropertyBindingComponent,
     StringInterpolationComponent,
-    EventBindingComponent
+    EventBindingComponent,
+    DirectivesComponent
   ],
   imports: [
     BrowserModule,
