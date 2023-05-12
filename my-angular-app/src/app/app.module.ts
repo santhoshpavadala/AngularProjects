@@ -14,6 +14,9 @@ import { PropertyBindingComponent } from './property-binding/property-binding.co
 import { StringInterpolationComponent } from './string-interpolation/string-interpolation.component';
 import { EventBindingComponent } from './event-binding/event-binding.component';
 import { DirectivesComponent } from './directives/directives.component';
+import { DebuggingComponent } from './debugging/debugging.component';
+import { CockpitComponent } from './cockpit/cockpit.component';
+import { ServerElementComponent } from './server-element/server-element.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,10 @@ import { DirectivesComponent } from './directives/directives.component';
     PropertyBindingComponent,
     StringInterpolationComponent,
     EventBindingComponent,
-    DirectivesComponent
+    DirectivesComponent,
+    DebuggingComponent,
+    CockpitComponent,
+    ServerElementComponent
   ],
   imports: [
     BrowserModule,
