@@ -1,0 +1,36 @@
+@use '@angular/material' as mat;
+@use './variables' as v;
+
+/* ===============================
+   BASE THEME (REQUIRED)
+================================ */
+html {
+  @include mat.theme((
+    color: (
+      primary: mat.$blue-palette,
+      // tertiary: mat.$purple-palette,
+      error: mat.$red-palette,
+    ),
+    density: 0,
+  ));
+}
+
+/* ===============================
+   COMPONENT OVERRIDES
+================================ */
+:root {
+
+  /* Toolbar */
+  @include mat.toolbar-overrides((
+    container-background-color: v.$primary-main,
+    container-text-color: white,
+  ));
+
+  /* Cards */
+  @include mat.card-overrides((
+    elevated-container-color: v.$card-bg-soft,
+    elevated-container-shape: v.$radius-md,
+    elevated-container-elevation: var(--mat-sys-level1),
+  ));
+
+}

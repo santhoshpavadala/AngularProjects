@@ -1,0 +1,46 @@
+@use '@angular/material' as mat;
+@use '../variables' as v;
+
+:root {
+
+  @include mat.form-field-overrides((
+
+    /* ======================
+       SHAPE
+    ======================= */
+    outlined-container-shape: v.$radius-md,
+
+    /* ======================
+       BORDER COLORS
+    ======================= */
+    outlined-outline-color: #cbd5e1,
+    outlined-hover-outline-color: #94a3b8,
+    outlined-focus-outline-color: #1e3c72,
+    outlined-disabled-outline-color: #e2e8f0,
+
+    /* ======================
+       LABEL COLORS
+    ======================= */
+    outlined-label-text-color: #64748b,
+    outlined-hover-label-text-color: #475569,
+    outlined-focus-label-text-color: #1e3c72,
+    outlined-disabled-label-text-color: #94a3b8,
+
+    /* ======================
+       INPUT TEXT
+    ======================= */
+    outlined-input-text-color: #1e293b,
+    outlined-input-text-placeholder-color: #94a3b8,
+    outlined-disabled-input-text-color: #9ca3af,
+
+    /* ======================
+       ERROR STATE
+    ======================= */
+    outlined-error-outline-color: #dc2626,
+    outlined-error-label-text-color: #dc2626,
+    outlined-error-focus-outline-color: #dc2626,
+    error-text-color: #dc2626,
+
+  ));
+
+}

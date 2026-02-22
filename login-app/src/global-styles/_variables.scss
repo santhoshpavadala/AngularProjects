@@ -1,0 +1,40 @@
+@use '@angular/material' as mat;
+
+/* Brand palettes (Material 3 expects full palettes) */
+$brand-primary: mat.$blue-palette;
+$brand-accent: mat.$cyan-palette;
+
+/* Custom tokens */
+// Colors: 
+$primary-main: #1e3c72;
+$white: #FFFFFF;
+$black: #000000;
+
+// Card default variables
+// $card-bg-default: var(--mat-sys-surface);
+// $card-bg-soft: var(--mat-sys-surface-container-low);
+// $card-bg-strong: var(--mat-sys-surface-container-high);
+
+$card-bg-default: white;
+$card-bg-soft: rgba(255, 255, 255, 0.15);
+$card-bg-strong: var(--mat-sys-surface-container-high);
+
+// Border-radius
+$radius-md: 10px;
+
+// Typography
+$font-family-base: 'Inter', sans-serif;
+
+
+// mat.$red-palette
+// mat.$blue-palette
+// mat.$green-palette
+// mat.$indigo-palette
+// mat.$purple-palette
+// mat.$cyan-palette
+// mat.$teal-palette
+// mat.$amber-palette
+// mat.$deep-purple-palette
+// mat.$blue-grey-palette
+// mat.$pink-palette
+// mat.$orange-palette
