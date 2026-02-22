@@ -1,0 +1,33 @@
+@use '@angular/material' as mat;
+@use '../variables' as v;
+
+
+
+:root {
+  /* FILLED (mat-raised-button) */
+  @include mat.button-overrides((
+    filled-container-color: v.$primary-main,
+    filled-label-text-color: white,
+    filled-container-shape: v.$radius-md,
+  ));
+
+  /* OUTLINED (mat-stroked-button) */
+  @include mat.button-overrides((
+    outlined-outline-color: v.$primary-main,
+    outlined-label-text-color: v.$primary-main,
+    outlined-container-shape: v.$radius-md,
+  ));
+
+  /* TONAL (mat-flat-button) */
+  @include mat.button-overrides((
+    tonal-container-color: #e3f2fd,
+    tonal-label-text-color: v.$primary-main,
+    tonal-container-shape: v.$radius-md,
+  ));
+
+  /* TEXT (mat-button) */
+  @include mat.button-overrides((
+    text-label-text-color: v.$primary-main,
+  ));
+
+}

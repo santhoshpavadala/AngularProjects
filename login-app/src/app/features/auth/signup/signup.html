@@ -1,0 +1,27 @@
+<div class="signup-container">
+  <mat-card>
+
+    <h2>Signup</h2>
+
+    <form [formGroup]="signupForm" (ngSubmit)="signup()">
+
+      <mat-form-field appearance="outline" class="full-width">
+        <input matInput placeholder="Email" formControlName="email">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <input matInput type="password" placeholder="Password" formControlName="password">
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" class="full-width">
+        Create Account
+      </button>
+
+    </form>
+
+    <div class="links">
+      <a routerLink="/login">Back to Login</a>
+    </div>
+
+  </mat-card>
+</div>
