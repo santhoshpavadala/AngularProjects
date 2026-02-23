@@ -1,19 +1,24 @@
-<div class="layout-wrapper">
+<div class="app-layout">
+<app-header [isMobile]="isMobile" (toggle)="toggleSidenav()" class="app-header"></app-header>
 
-  <app-header></app-header>
+<mat-sidenav-container class="app-container">
+  <mat-sidenav #drawer
+    class="app-mat-sidenav"
+    [class.collapsed]="isCollapsed"
+    [mode]="isMobile ? 'over' : 'side'"
+    [opened]="isSidebarOpen"
+    (closedStart)="isSidebarOpen = false">
 
-  <mat-sidenav-container class="sidenav-container">
+    <app-sidenav></app-sidenav>
 
-    <mat-sidenav mode="side" opened class="sidenav">
-      <app-sidenav></app-sidenav>
-    </mat-sidenav>
+  </mat-sidenav>
 
-    <mat-sidenav-content>
-      <div class="content">
-        <router-outlet></router-outlet>
-      </div>
-    </mat-sidenav-content>
+  <mat-sidenav-content>
+    <main class="app-content">
+      <router-outlet></router-outlet>
+    </main>
 
-  </mat-sidenav-container>
+  </mat-sidenav-content>
 
+</mat-sidenav-container>
 </div>

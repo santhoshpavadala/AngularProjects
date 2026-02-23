@@ -1,45 +1,7 @@
-.layout-wrapper {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-/* Header fixed height */
-app-header {
-  height: 64px;
-  flex-shrink: 0;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-/* Container takes remaining space */
-.sidenav-container {
-  flex: 1;
-}
-
-/* Sidenav width */
-.sidenav {
-  width: 240px;
-}
-
-/* Content spacing */
-.content {
-  padding: 24px;
-  height: 100%;
-  overflow: auto;
-  box-sizing: border-box;
-}
-
-mat-sidenav-content {
-  display: flex;
-  flex-direction: column;
-}
-
-
+@use '@angular/material' as mat;
+@use './variables' as v;
 
 // Login scss
-
 .auth-wrapper {
   height: 100vh;
   display: flex;
@@ -51,10 +13,8 @@ mat-sidenav-content {
   width: 400px;
   padding: 40px;
   border-radius: 16px;
-
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(15px);
-
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
   color: white;
 }
@@ -75,3 +35,101 @@ mat-sidenav-content {
   width: 100%;
   margin-bottom: 18px;
 }
+
+.auth-links {
+  display: flex; justify-content: space-between;
+}
+
+
+// App scss
+.app-layout {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  height: 64px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 0;
+}
+
+.app-container {
+  flex: 1;
+}
+
+.app-mat-sidenav {
+  --mat-sidenav-container-width: 240px;
+  background: white;
+  border-right: 1px solid #e5e7eb;
+}
+.app-mat-sidenav.collapsed {
+  --mat-sidenav-container-width: 240px;
+}
+
+.app-content {
+  padding: 24px;
+  background: #f5f7fa;
+  min-height: calc(100vh - 64px);
+}
+
+
+// Main Header SCSS
+.logo {
+  font-weight: 600;
+  font-size: 18px;
+  margin-left: 16px;
+}
+.spacer {
+  flex: 1;
+}
+
+// Sidenav SCSS
+:host {
+  display: block;
+  height: 100%;
+}
+
+mat-nav-list {
+  padding-top: 16px;
+}
+
+mat-list-item {
+  height: 48px;
+  margin: 4px 12px;
+  border-radius: 8px;
+}
+
+
+// Global Mat icon 
+
+mat-icon {
+  margin-right: 12px;
+  --mat-icon-color: v.$white;
+  &.nav-icon {
+     --mat-icon-color: v.$black;
+  }
+}
+
+.mat-mdc-form-field-icon-suffix mat-icon {
+  color: v.$white;
+} 
+
+.active-link {
+  background: rgba(30, 60, 114, 0.08);
+  color: #1e3c72;
+}
+
+.active-link mat-icon {
+  color: #1e3c72;
+}
+
+.mat-mdc-card {
+  --mat-card-elevated-container-color: #1e3c72;
+  margin-bottom: 20px;
+  padding: 20px;
+  color: white;
+}
+
+
