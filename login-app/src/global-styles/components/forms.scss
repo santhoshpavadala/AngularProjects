@@ -21,17 +21,17 @@
     /* ======================
        LABEL COLORS
     ======================= */
-    outlined-label-text-color: #64748b,
-    outlined-hover-label-text-color: #475569,
-    outlined-focus-label-text-color: #1e3c72,
+    outlined-label-text-color: v.$white,
+    outlined-hover-label-text-color: v.$white,
+    outlined-focus-label-text-color: v.$white,
     outlined-disabled-label-text-color: #94a3b8,
 
     /* ======================
        INPUT TEXT
     ======================= */
-    outlined-input-text-color: #1e293b,
-    outlined-input-text-placeholder-color: #94a3b8,
-    outlined-disabled-input-text-color: #9ca3af,
+    outlined-input-text-color: v.$white,
+    outlined-input-text-placeholder-color: v.$white,
+    outlined-disabled-input-text-color: #94a3b8,
 
     /* ======================
        ERROR STATE

@@ -27,7 +27,7 @@
 
   /* TEXT (mat-button) */
   @include mat.button-overrides((
-    text-label-text-color: v.$primary-main,
+    text-label-text-color: v.$white,
   ));
 
 }

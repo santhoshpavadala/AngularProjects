@@ -5,5 +5,37 @@
       "email": "santhoshpavadala123@gmail.com",
       "password": "test@123"
     }
-  ]
+  ],
+  "profile": {
+    "id": 1,
+    "name": "Santhosh Pavadala",
+    "title": "Angular Developer",
+    "summary": "Frontend developer specializing in Angular enterprise applications."
+  },
+
+  "skills": [
+    { "id": 1, "name": "Angular", "level": 90 },
+    { "id": 2, "name": "TypeScript", "level": 85 },
+    { "id": 3, "name": "RxJS", "level": 75 },
+    { "id": 4, "name": "SCSS", "level": 80 }
+  ],
+
+  "projects": [
+    {
+      "id": 1,
+      "title": "RMES Monitoring System",
+      "description": "Industrial analytics dashboard with Angular."
+    },
+    {
+      "id": 2,
+      "title": "Swayam Portal",
+      "description": "Enterprise modular Angular application."
+    }
+  ],
+  "contact": {
+    "id": 1,
+    "email": "santhosh@email.com",
+    "phone": "+91-XXXXXXXXXX"
+  }
+
 }

@@ -47,6 +47,18 @@ export const routes: Routes = [
                 loadComponent: () =>
                 import('./features/pages/contact/contact')
                     .then(m => m.Contact)
+            },
+            {
+                path: 'contact',
+                loadComponent: () => import('./features/pages/contact/contact').then(m => m.Contact)
+            },
+            {
+                path: 'skills',
+                loadComponent:()=> import('./features/pages/skills/skills').then(m => m.Skills)
+            },
+            {
+                path: 'projects',
+                loadComponent: ()=> import('./features/pages/projects/projects').then(m=>m.Projects)
             }
         ]
     },

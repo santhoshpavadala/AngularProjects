@@ -1,4 +1,17 @@
-<button mat-raised-button>Filled</button>
-<button mat-stroked-button>Outlined</button>
-<button mat-flat-button>Tonal</button>
-<button mat-button>Text</button>
+<mat-card class="card-profile">
+  <h2>{{ profile?.name }}</h2>
+  <p>{{ profile?.title }}</p>
+  <p>{{ profile?.summary }}</p>
+</mat-card>
+
+<mat-card class="card-section">
+  <h3>Top Skills</h3>
+
+  <div *ngFor="let skill of skills">
+    <p>{{ skill.name }}</p>
+    <mat-progress-bar
+      mode="determinate"
+      [value]="skill.level">
+    </mat-progress-bar>
+  </div>
+</mat-card>

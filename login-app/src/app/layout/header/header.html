@@ -1,5 +1,12 @@
-<mat-toolbar color="primary">
-      <span>Angular App</span>
-      <span style="flex:1 1 auto"></span>
-      <button mat-raised-button (click)="logout()">Logout</button>
+<mat-toolbar class="app-toolbar">
+   <!-- Show only on mobile -->
+  <button *ngIf="isMobile"
+          mat-icon-button
+          (click)="toggle.emit()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span class="logo">Santhosh Portfolio</span>
+  <span class="spacer"></span>
+  <button mat-button>Profile</button>
+  <button mat-button color="warn" (click)="logout()">Logout</button>
 </mat-toolbar>

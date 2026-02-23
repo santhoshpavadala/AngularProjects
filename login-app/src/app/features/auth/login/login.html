@@ -1,7 +1,7 @@
 <div class="auth-wrapper">
   <mat-card class="auth-card">
 
-    <h2 class="title">Welcome Back 👋</h2>
+    <h2 class="title">Welcome to my Portfolio 👋</h2>
     <p class="subtitle">Please login to continue</p>
 
     <form [formGroup]="loginForm" (ngSubmit)="login()">
@@ -9,7 +9,7 @@
       <mat-form-field appearance="outline" class="full-width">
         <mat-label>Email</mat-label>
         <input matInput formControlName="email">
-        <mat-icon matSuffix>email</mat-icon>
+        <mat-icon matSuffix class="login-icon">email</mat-icon>
         <mat-error *ngIf="loginForm.get('email')?.hasError('required')">
           Email is required
         </mat-error>
@@ -21,7 +21,7 @@
       <mat-form-field appearance="outline" class="full-width">
         <mat-label>Password</mat-label>
         <input matInput type="password" formControlName="password">
-        <mat-icon matSuffix>password</mat-icon>
+        <mat-icon matSuffix class="login-icon">password</mat-icon>
         <mat-error *ngIf="loginForm.get('password')?.hasError('required')">
           Password is required
         </mat-error>
@@ -36,8 +36,8 @@
     </form>
 
     <div class="auth-links">
-      <a routerLink="/forgot-password">Forgot Password?</a>
-      <a routerLink="/signup">Create Account</a>
+      <button matButton routerLink="/forgot-password">Forgot Password?</button>
+      <button matButton routerLink="/signup">Create Account</button>
     </div>
 
   </mat-card>

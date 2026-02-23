@@ -19,7 +19,6 @@ html {
    COMPONENT OVERRIDES
 ================================ */
 :root {
-
   /* Toolbar */
   @include mat.toolbar-overrides((
     container-background-color: v.$primary-main,
@@ -32,5 +31,9 @@ html {
     elevated-container-shape: v.$radius-md,
     elevated-container-elevation: var(--mat-sys-level1),
   ));
+
+  // @include mat.icon-overrides((
+  //   color: v.$white,
+  // ));
 
 }
